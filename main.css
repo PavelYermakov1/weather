@@ -20,6 +20,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+html {
+  height: 100%;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -55,7 +59,7 @@ table {
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   background-color: #8c8c8c;
@@ -98,8 +102,7 @@ body {
 
 .body-wrapper {
   width: 90%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 4% 6%;
 }
@@ -135,19 +138,13 @@ body {
 }
 
 .flow-blocks-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
+  box-pack: justify;
+  justify-content: space-between;
+  flex-flow: wrap;
 }
 
 .flex-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -164,8 +161,6 @@ button {
 }
 
 .control-bnt-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 40px;
   margin: 0 20px 30px 0;
@@ -189,8 +184,7 @@ button {
 
 .btn-controls_image i {
   font-size: 53px;
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
 .expand-list-wrapper {
@@ -223,11 +217,9 @@ button {
   background-color: #ccccccd1;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
-  -webkit-box-shadow: 0 0 3px #888;
-          box-shadow: 0 0 3px #888;
+  box-shadow: 0 0 3px #888;
   z-index: 11;
-  -webkit-animation: 0.5s ease-out;
-          animation: 0.5s ease-out;
+  animation: 0.5s ease-out;
 }
 
 .expand-list-wrapper .lang-list li {
@@ -238,13 +230,11 @@ button {
 }
 
 .expand-list-wrapper .show-list {
-  -webkit-animation-name: expand;
-          animation-name: expand;
+  animation-name: expand;
 }
 
 .expand-list-wrapper .hide-list {
-  -webkit-animation-name: expand;
-          animation-name: expand;
+  animation-name: expand;
   animation-direction: reverse;
 }
 
@@ -288,8 +278,6 @@ button {
 }
 
 .control-search-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 40px;
 }
@@ -347,48 +335,41 @@ button {
   height: 20px;
   border-radius: 50%;
   border: 1px solid #fff;
-  -webkit-transform: translate(-45%, -48%);
-          transform: translate(-45%, -48%);
+  transform: translate(-45%, -48%);
 }
 
 .mic-animation:before {
-  -webkit-animation: waveBefore 1s ease-in-out infinite;
-          animation: waveBefore 1s ease-in-out infinite;
+  animation: waveBefore 1s ease-in-out infinite;
 }
 
 .mic-animation:after {
-  -webkit-animation: waveAfter 1s ease-in-out infinite;
-          animation: waveAfter 1s ease-in-out infinite;
+  animation: waveAfter 1s ease-in-out infinite;
 }
 
 @-webkit-keyframes waveBefore {
   to {
-    -webkit-transform: scale(2) translate(-30%, -30%);
-            transform: scale(2) translate(-30%, -30%);
+    transform: scale(2) translate(-30%, -30%);
     opacity: 0;
   }
 }
 
 @keyframes waveBefore {
   to {
-    -webkit-transform: scale(2) translate(-30%, -30%);
-            transform: scale(2) translate(-30%, -30%);
+    transform: scale(2) translate(-30%, -30%);
     opacity: 0;
   }
 }
 
 @-webkit-keyframes waveAfter {
   to {
-    -webkit-transform: scale(3) translate(-20%, -20%);
-            transform: scale(3) translate(-20%, -20%);
+    transform: scale(3) translate(-20%, -20%);
     opacity: 0;
   }
 }
 
 @keyframes waveAfter {
   to {
-    -webkit-transform: scale(3) translate(-20%, -20%);
-            transform: scale(3) translate(-20%, -20%);
+    transform: scale(3) translate(-20%, -20%);
     opacity: 0;
   }
 }
@@ -411,12 +392,9 @@ button {
 }
 
 .content__date {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 3%;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
+  flex-flow: wrap;
   font-size: 2em;
 }
 
@@ -430,9 +408,8 @@ button {
 }
 
 .today {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  box-align: end;
+  align-items: flex-end;
   margin: 5% 0 10%;
 }
 
@@ -447,8 +424,7 @@ button {
 }
 
 .today__temperature {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   margin-right: 5%;
   font-size: 10em;
   line-height: 0.8;
@@ -486,8 +462,7 @@ button {
 }
 
 .daily__item-temperature {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   font-size: 3.5rem;
 }
 
@@ -546,8 +521,7 @@ button {
   position: absolute;
   top: 20%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 11;
 }
 
@@ -558,8 +532,7 @@ button {
 }
 
 .error-block {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   padding: 20px;
   margin: 20px auto;
@@ -577,8 +550,7 @@ button {
 
 .error-block label input {
   margin: 0 10px 0 0;
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .error-block .btn-close-modal {
